@@ -367,3 +367,100 @@ body{
     height: 650px;
     margin : 25px 0 0 0;
 }
+.Histroty_div{
+    display: flex;
+}
+.History_left{
+    flex-basis: 39%;
+    margin : 10px 0 0 25px;
+}
+.History_right{
+    flex-basis: 61%;
+    margin : 25px 0 0 25px;
+}
+.History_select{
+    @include div-style();
+    flex-basis: 100%;
+    height: 100px;
+    flex-direction: column;
+    justify-content: space-around;
+    display: flex;
+    margin:0 0 15px 0;
+
+}
+.History_target{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    height: 799px;
+    overflow-y: scroll;
+    justify-content: space-around;
+}
+.History_chart{
+    @include div-style();
+    flex-basis: 100%;
+    height: 799px;
+    margin : 25px 0 0 0; 
+}
+.list-div{
+    @include div-style();
+    flex-basis: 80%;
+    height: 250px;
+    margin: 25px 0 0 0;
+}
+.trash_2x{
+    width: 40px;
+    height: 30px;
+    margin: 125px 0 0 0;
+}
+.todo-span{
+    font-family: NanumSquare;
+    font-size: 22px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #5554e8;
+    margin: 10px 0 0 10px;
+}
+.todo-div{
+    display: flex;
+    justify-content: space-between;
+}
+.todo-selectbox-div{
+    display: flex;
+    justify-content: center;
+}
+.todo-selectbox{
+    width:90%;
+    font-family: NanumSquare;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #666;
+    padding: 10px 14px 8px 16px;
+    border-radius: 6px;
+    border: solid 1px #e2e2e2;
+    background-color: #fff;
+}
+.all-record-btn{
+    padding: 6px 14px 5px 14px;
+    margin: 10px 10px 0 0;
+    border-radius: 6px;
+    background-color: #5554e8;
+    font-family: NanumSquare;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}

@@ -2,7 +2,8 @@ import React,{ useState } from 'react'
 import {Container} from 'react-bootstrap'
 import './App.scss';
 
-import mini_icon from './quanton-mini-icon.png';
+import mini_icon from './img/quanton-mini-icon.png';
+import trash_2x from './img/trash_2x.png';
 /*
 ===========vs code 기능================
 - ctrl shft R = 함수로 묶기, move to new file로 옮기기도 가능
@@ -276,22 +277,46 @@ function MarketConditionMenu(){
 function HistoryMenu(){
   return(
     <div className="content_div">
-      <div className="b_content">
-        <div className="BackTesting_left">
-          <div className="searchBar_div">
-            <div className="searchBar"> </div>
+      <div className="Histroty_div">
+        <div className="History_left">
+          <div className="History_select">
+            <div className="todo-div">
+              <span className="todo-span">매매 기록 To-Do</span>
+              <div className="all-record-btn">기록 전체보기</div>
+            </div>
+            <div className="todo-selectbox-div">
+              <select className="todo-selectbox">
+                <option value="">임시콤보박스</option>
+              </select>
+            </div>
           </div>
-          <div className="b_left_1_div"></div>
-          <div className="b_left_2_div"></div>
-          <div className="b_left_3_div"></div>
-          <div className="b_left_4_div"></div>
+          <div className="History_target">
+            <div className="list-div"></div>
+            <img className='trash_2x' src={trash_2x}></img>
+            <div className="list-div"></div>
+            <img className='trash_2x' src={trash_2x}></img>
+            <div className="list-div"></div>
+            <img className='trash_2x' src={trash_2x}></img>
+            <div className="list-div"></div>
+            <img className='trash_2x' src={trash_2x}></img>
+            <div className="list-div"></div>
+            <img className='trash_2x' src={trash_2x}></img>
+            <div className="list-div"></div>
+            <img className='trash_2x' src={trash_2x}></img>
+          </div>
         </div>
-        <div className="BackTesting_right">
-          <div className="BackTesting_bar"></div>
-          <span className="BackTesting_Result">백테스트 결과</span>
-          <div className="BackTesting_Summary"></div>
-          <div className="BackTesting_montly_status"></div>
-          <div className="BackTesting_montly_gap"></div>
+        <div className="History_right">
+          <div className="searchBar">
+            
+          </div>
+          <div className="History_chart">
+            <div>
+            
+            </div>
+            <div>
+            
+            </div>
+          </div>
         </div>
       </div>
     </div>
