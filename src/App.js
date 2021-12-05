@@ -163,7 +163,7 @@ function FinancialMenu(){
               <li className="innerLeftMenuElement">세전계속사업이익</li>
               <li className="innerLeftMenuElement">당기순이익</li>
               <li className="innerLeftMenuElement">당기순이익(지배)</li>
-              <li className="innerLeftMenuElement">당기순이익(비지배)</li>
+              <li className="innerLeftMenuElement">당기순이익(지배)</li>
             </ul>
           </div>
         </div>
