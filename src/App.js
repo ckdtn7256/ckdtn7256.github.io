@@ -249,7 +249,7 @@ function MarketConditionMenu(){
               <li className="innerLeftMenuElement">미국 10년 채권</li>
               <li className="innerLeftMenuElement">한국 3년 채권</li>
             </ul>
-          </d
+          </div>
           <div className="innerLeftDiv_">
             <ul className="innerLeftMenu_ul">
               <li className="innerLeftMenuTitle">시장 위험도</li>
