@@ -163,7 +163,7 @@ function FinancialMenu(){
               <li className="innerLeftMenuElement">세전계속사업이익</li>
               <li className="innerLeftMenuElement">당기순이익</li>
               <li className="innerLeftMenuElement">당기순이익(지배)</li>
-              <li className="innerLeftMenuElement">당기순이익(비지배)</li>
+              <li className="innerLeftMenuElement">당기순이익(지배)</li>
             </ul>
           </div>
         </div>
@@ -249,7 +249,7 @@ function MarketConditionMenu(){
               <li className="innerLeftMenuElement">미국 10년 채권</li>
               <li className="innerLeftMenuElement">한국 3년 채권</li>
             </ul>
-          </div>
+          </d
           <div className="innerLeftDiv_">
             <ul className="innerLeftMenu_ul">
               <li className="innerLeftMenuTitle">시장 위험도</li>
