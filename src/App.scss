@@ -74,7 +74,7 @@ body{
 .searchBar_div{
     height: 50px;
     margin: 32px 0 0 32px;
-    flex-basis:100%;
+    //flex-basis:100%;
 }
 .searchBar{
     width: 300px;
@@ -102,10 +102,74 @@ body{
     color: #d5d5d5;
 }
 .portfolioItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     height: 335px;
     margin: 8px 0 0 32px;
+}
+.port_summary{
+    display: flex;
+    flex-direction: column;
+    flex-basis:200px;
     @include div-style();
 }
+.port_list{
+    flex-basis:83%;
+    @include div-style();
+}
+.port_summary_data{
+    flex-basis:300px;
+}
+.port_detail_btn_div{
+    flex-basis:30px;
+    display: flex;
+    justify-content: space-around;
+}
+.port_detail_btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    width: 70%;
+    height: 70%;
+    font-family: NanumSquare;
+    font-size: 10px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #999;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+.port_detail_content_div{
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+}
+.port_detail_title{
+    display: flex;
+    align-items: flex-end;
+    margin: 19px 0 0 32px;
+    font-family: NanumSquare;
+    font-size: 24px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #999;
+}
+.portfolio_detail_main{
+    flex-basis: 791px;
+    margin: 0 0 0 32px;
+    @include div-style();
+}
+
 .performance{
     height: 202px;
     margin: 8px 0 0 32px;
@@ -279,13 +343,13 @@ body{
 }
 .b_left_1_div{
     @include div-style();
-    flex-basis: 45%;
+    flex-basis: 54%;
     height:150px;
     margin : 32px 0 0 32px;
 }
 .b_left_2_div{
     @include div-style();
-    flex-basis: 45%;
+    flex-basis: 41%;
     height:150px;
     margin : 32px 0 0 0;
 }

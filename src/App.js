@@ -17,14 +17,14 @@ import trash_2x from './img/trash_2x.png';
 */
 function App(){
 
-  let [menuState,setMenuState] = useState([true,false,false,false,false]);
+  let [menuState,setMenuState] = useState([true,false,false,false,false,false]);
   let [curMenuIdx,setCurMenuIdx] = useState(0);
   return(
     <div className="App">
         <Side menuState={menuState} menuState_modi={setMenuState} ></Side>
         {
           menuState[0] === true
-          ? <PortfolioMenu></PortfolioMenu>
+          ? <PortfolioMenu menuState={menuState} menuState_modi={setMenuState}></PortfolioMenu>
           : null
         }
         {
@@ -47,6 +47,11 @@ function App(){
           ? <HistoryMenu></HistoryMenu>
           : null
         }
+        {
+          menuState[5] === true
+          ? <PortfolioDetailMenu></PortfolioDetailMenu>
+          : null
+        }
     </div>
   );
 }
@@ -61,7 +66,7 @@ function App(){
 function Side(props){//컴포넌트는 대문자로시작
   const menuClick = (param) => {
     props.menuState_modi([false]); 
-    let menu = Array.from({length:5}, ()=>false);
+    let menu = Array.from({length:6}, ()=>false);
     menu[param] = true;
     props.menuState_modi(menu);
   }
@@ -84,7 +89,13 @@ function Side(props){//컴포넌트는 대문자로시작
   )
 }
 
-function PortfolioMenu(){
+function PortfolioMenu(props){
+  const menuClick = (param) => {
+    props.menuState_modi([false]); 
+    let menu = Array.from({length:6}, ()=>false);
+    menu[param] = true;
+    props.menuState_modi(menu);
+  }
   return(
     <div className="content_div">
       <div className="searchBar_div">
@@ -92,8 +103,22 @@ function PortfolioMenu(){
       </div>
       <div className="chartBox"></div>
       <div className="detail_div2">
-        <div className="inner-title">Portfolio items</div>
-        <div className="portfolioItems"></div>
+        <div className="inner-title">My Portfolio</div>
+        <div className="portfolioItems">
+          <div className="port_summary">
+            <div className="port_summary_data">
+
+            </div>
+            <div className="port_detail_btn_div">
+              <button className="port_detail_btn" onClick={ ()=> menuClick(5)}>
+                포트폴리오 상세보기
+              </button>
+            </div>
+          </div>
+          <div className="port_list">
+            
+          </div>
+        </div>
       </div>
 
       <div className="detail_div3">
@@ -112,6 +137,20 @@ function PortfolioMenu(){
 
   )
 
+}
+function PortfolioDetailMenu(){
+  return(
+    <div className="port_detail_content_div">
+      <div className="searchBar_div">
+        <div className="searchBar"> </div>
+      </div>
+      <div className="port_detail_title">
+        <a>Portfolio detail</a>
+      </div>
+      <div className="portfolio_detail_main">
+      </div>
+    </div>
+  )
 }
 
 function FinancialMenu(){
